@@ -10,7 +10,7 @@ namespace ACA
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ACA.Aysha.Authentication.Views.Loginpage();
         }
 
         protected override void OnStart()
