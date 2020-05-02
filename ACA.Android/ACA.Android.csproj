@@ -66,7 +66,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\FireBaseAuthenticator.cs" />
     <Compile Include="Interfaces\GoogleAuthenticator.cs" />
+    <Compile Include="Interfaces\IFireBaseAuthenticator.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

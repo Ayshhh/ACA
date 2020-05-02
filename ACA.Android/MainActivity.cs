@@ -12,6 +12,7 @@ using ACA.Droid.Interfaces;
 using Android.Content;
 using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Auth.Api;
+using Firebase;
 
 namespace ACA.Droid
 {
@@ -28,6 +29,8 @@ namespace ACA.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            FirebaseApp.InitializeApp(Application.ApplicationContext);
+            DependencyService.Register<IFireBaseAuthenticator, FireBaseAuthenticator>();
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

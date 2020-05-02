@@ -4,13 +4,11 @@ using System.Text;
 
 namespace ACA.Aysha.Authentication.Model
 {
-    public class GoogleUser
+    public class AppUser
     {
-        internal object token;
-
         public string Name { get; set; }
         public string Email { get; set; }
-        public Uri Picture { get; set; }
-        public string Token { get; set; }
+        public string Picture { get; set; }
+        public string Uid { get; set; }
     }
 }
