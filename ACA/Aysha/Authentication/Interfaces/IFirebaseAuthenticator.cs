@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ACA.Aysha.Authentication.Interfaces
 {
-    public interface IFirebaseAuthenticator
+    public interface IFireBaseAuthenticator
     {
         Task<AppUser> LoginWithGoogle(string idTok, string accesTok);
-
     }
 }

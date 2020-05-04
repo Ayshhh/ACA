@@ -2,15 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ACA.Aysha.Authentication.Views"
              mc:Ignorable="d"
              x:Class="ACA.Aysha.Authentication.Views.Loginpage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Click Here"
-                   FontSize="Large" />
-            <Button Text="Login"
+
+
+        <RelativeLayout>
+            <Image x:Name="Background" Source="background.png"/>
+            <Image x:Name="Lightl" Source="lightl.png" Margin="20,0,0,0"/>
+            <Image x:Name="Lightr" Source="lightr.png" Margin="160,0,0,0"/>
+            <Image x:Name="Clock" Source="clock.png" Margin="320,40,0,0"/>
+            <Label x:Name="Logintext" Text="Login" TextColor="White" FontSize="35" FontAttributes="Bold" BackgroundColor="Transparent" Margin="165,220,0,0" />
+            <Frame x:Name="Box" CornerRadius="8" Padding="10,4,10,4" Margin="25,440,25,0" HeightRequest="110" WidthRequest="340">
+                <StackLayout>
+                    <controls:CustomEntry x:Name="Email" Placeholder="Email or Phone Number"/>
+                    <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="Fill" />
+                    <controls:CustomEntry x:Name="Password" Placeholder="Password"  IsPassword="True" />
+                </StackLayout>
+            </Frame>
+            <Button x:Name="Loginbutton" Text="Login" Margin="25,640,25,0" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="360" BackgroundColor="#696edd" CornerRadius="8" TextColor="White"
                     Clicked="Login"/>
-        </StackLayout>
+            <Label x:Name="Forgot" Text="Forgot Password ?" TextColor="#696edd" FontSize="Default" Margin="155,740,0,0" HorizontalOptions="Center"/>
+        </RelativeLayout>
+        
+
     </ContentPage.Content>
 </ContentPage>

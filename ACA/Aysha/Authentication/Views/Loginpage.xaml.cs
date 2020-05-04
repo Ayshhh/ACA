@@ -26,18 +26,63 @@ namespace ACA.Aysha.Authentication.Views
 
         public async void Login(object sender, EventArgs e)
         {
-            try
-            {
+            Lightl.TranslationY = -60;
+            Lightr.TranslationY = -30;
+            Clock.TranslationY = -30;
+            Logintext.TranslationY = -20;
+            Box.TranslationY = -20;
+            Loginbutton.TranslationY = -20;
+            Forgot.TranslationY = -20;
+            
 
-                _googleManager.Logout();
-                _googleManager.Login(OnLoginComplete);
+            Lightl.Opacity = 0;
+            Lightr.Opacity = 0;
+            Clock.Opacity = 0;
+            Logintext.Opacity = 0;
+            Box.Opacity = 0;
+            Loginbutton.Opacity = 0;
+            Forgot.Opacity = 0;
 
-            }
-            catch (Exception x)
-            {
+            Lightl.FadeTo(1, 300);
+            await Lightl.TranslateTo(0, 0, 300);
 
-                await DisplayAlert("Authentication Failed", "Your Authentication Attempt Failed. Please try again..", "Ok");
-            }
+            
+            Lightr.FadeTo(1, 300);
+            await Lightr.TranslateTo(0, 0, 300);
+
+            
+            Clock.FadeTo(1, 300);
+            await Clock.TranslateTo(0, 0, 300);
+
+            
+            Logintext.FadeTo(1, 300);
+            await Logintext.TranslateTo(0, 0, 300);
+
+            
+            Box.FadeTo(1, 300);
+            await Box.TranslateTo(0, 0, 300);
+
+            
+            Loginbutton.FadeTo(1, 300);
+            await Loginbutton.TranslateTo(0, 0, 300);
+
+            
+            Forgot.FadeTo(1, 300);
+            await Forgot.TranslateTo(0, 0, 300);
+            
+
+             try
+             {
+
+                 _googleManager.Logout();
+                 _googleManager.Login(OnLoginComplete);
+
+             }
+             catch (Exception x)
+             {
+
+                 await DisplayAlert("Authentication Failed", "Your Authentication Attempt Failed. Please try again..", "Ok");
+             } 
         }
         private async void OnLoginComplete(GoogleUser googleUser, string message)
         {

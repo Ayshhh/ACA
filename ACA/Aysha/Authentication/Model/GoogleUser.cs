@@ -6,7 +6,7 @@ namespace ACA.Aysha.Authentication.Model
 {
     public class GoogleUser
     {
-        internal object token;
+        
 
         public string Name { get; set; }
         public string Email { get; set; }

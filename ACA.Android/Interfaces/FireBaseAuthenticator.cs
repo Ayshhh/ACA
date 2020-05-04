@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ACA.Aysha.Authentication.Interfaces;
 using ACA.Aysha.Authentication.Model;
+using ACA.Aysha.Authentication.Views;
 using ACA.Droid.Interfaces;
 using Android.App;
 using Android.Content;
@@ -25,6 +27,7 @@ namespace ACA.Droid.Interfaces
             var cred = GoogleAuthProvider.GetCredential(IdTok, accessTok);
 
             var user = await FirebaseAuth.Instance.SignInWithCredentialAsync(cred);
+
             if (user != null)
             {
                 AppUser appUser = new AppUser()
